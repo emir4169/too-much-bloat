@@ -23,7 +23,7 @@ int main(int argc, char **argv){
     }
     while(fgets(buffer, bufferSize, (fp == NULL ? stdin : fp))){
         int length = strlen(buffer);
-        // buffer[length - 1] = "\0";
+        buffer[length - 1] = "\0";
         fprintf(stdout, "%s", buffer);
     }
     return 0;
